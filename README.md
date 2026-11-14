@@ -119,8 +119,16 @@ Use professional-commit to review staged changes and propose better commit messa
 Expected approval gate:
 
 ```text
-No files have been staged or committed by this skill. Approve this exact commit plan to proceed, or revise commit scope/message.
+No files have been staged or committed by this skill. Reply with a clear approval,
+such as “setuju”, “lanjut”, “approved”, or “go ahead”, to approve this commit
+plan. State any change if you want to revise scope or message.
 ```
+
+For one complete, unchanged commit plan, approval is interpreted by meaning,
+not exact wording. Short Indonesian or English approvals are accepted without
+repeating file paths or commit message. Clarification is required only when
+multiple commit groups await approval, response includes a change or condition,
+or plan changed after display.
 
 ## Safety boundaries
 

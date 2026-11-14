@@ -270,10 +270,24 @@ For multiple commits, show every group and exact message. Do not hide excluded s
 End with clear gate:
 
 ```text
-No files have been staged or committed by this skill. Approve this exact commit plan to proceed, or revise commit scope/message.
+No files have been staged or committed by this skill. Reply with a clear approval,
+such as “setuju”, “lanjut”, “approved”, or “go ahead”, to approve this commit
+plan. State any change if you want to revise scope or message.
 ```
 
-Accept approval only when it clearly covers displayed commit groups and messages. Treat ambiguous responses such as `go`, `continue`, or `commit it` as insufficient; ask for explicit scope confirmation.
+Interpret approval by ordinary meaning, not exact wording. For one complete,
+current commit plan, accept a concise Indonesian or English reply that clearly
+authorizes committing the displayed plan. Do not require the user to repeat
+paths, commit message, or a prescribed phrase. Examples include `setuju`,
+`lanjut`, `silakan`, `jalankan`, `gas`, `commit saja`, `approved`, `approve`,
+`go ahead`, `proceed`, `looks good`, `ship it`, and `do it`.
+
+Ask for clarification only when approval scope is genuinely unclear: multiple
+commit groups are awaiting approval, the reply requests a change or includes a
+condition, or the displayed plan changed after it was shown. For multiple
+groups, ask the user to identify the approved group or groups. Keep explicit
+confirmation requirements for detached HEAD, secrets, partial-file staging,
+and validation exceptions.
 
 ## 7. Execute approved commit plan
 
